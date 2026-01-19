@@ -5,11 +5,11 @@
  * Contraintes:
  *    - utiliser l'opérateur ternaire (if interdit)
  */
-function ternaire(a , b) {
-    const result = a>b ? a : b;
-    console.log(result);
+function ternaire(a,b) {
+     
+    console.log(a>b ? a : b);
 }
 
-console.log(ternaire(9 , 3));
+console.log(ternaire(9,3));
 
 module.exports = ternaire;
