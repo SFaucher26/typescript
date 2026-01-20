@@ -20,9 +20,22 @@
 // TODO: Définir l'enum Color et implémenter getColorCode
 
 export enum Color {
-  // À compléter
+  Red,
+  Green,
+  Blue,
 }
 
 export function getColorCode(color: Color): string {
-  throw new Error("Not implemented");
+switch (color) {
+  case Color.Red:
+    return "#FF0000";
+  case Color.Green:
+    return "#00FF00";
+  case Color.Blue:
+    return "#0000FF";
+  default:
+    throw new Error("unknow");
+  }
 }
+
+console.log(getColorCode(Color.Blue))
