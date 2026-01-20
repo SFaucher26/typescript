@@ -27,13 +27,21 @@
 // TODO: Définir le type UserProfile
 
 export type UserProfile = {
-  // À compléter
+  username:string,
+  email:string,
+  age:number,
+  bio:string
 };
 
 // TODO: Implémenter updateProfile
-
-export function updateProfile(profile: any, updates: any): any {
-  throw new Error("Not implemented");
+const user1 = {
+  "username": "sandrine",
+  "email": "sandrinie@test.fr",
+  "age": 42,
+  "bio":"développeuse fullstack",
+}
+export function updateProfile(profile: UserProfile, updates: Partial<UserProfile>): UserProfile {
+  return { ...profile, ...updates };
 }
 
 // TODO: Implémenter validateCompleteProfile
@@ -41,3 +49,6 @@ export function updateProfile(profile: any, updates: any): any {
 export function validateCompleteProfile(profile: any): any {
   throw new Error("Not implemented") ;
 }
+
+console.log(updateProfile(user1, { age: 26 }))
+console.log(updateProfile(user1, {username:"Eva"}))

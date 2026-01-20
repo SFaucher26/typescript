@@ -30,3 +30,4 @@ export async function fetchUsername(userId: number): Promise<string> {
 
 fetchUsername(1).then(console.log)
 fetchUsername(2).then(console.log)
+fetchUsername(4).then(console.log)
