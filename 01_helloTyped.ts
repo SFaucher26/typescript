@@ -11,8 +11,7 @@
 
 // TODO: Créer et exporter la fonction greet
 export function greet(name: string): string {
-  return "Hello " + name 
-  
+  return "Hello " + name ;
 }
 
 /**
