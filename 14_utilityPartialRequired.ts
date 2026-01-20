@@ -46,9 +46,16 @@ export function updateProfile(profile: UserProfile, updates: Partial<UserProfile
 
 // TODO: Implémenter validateCompleteProfile
 
-export function validateCompleteProfile(profile: any): any {
-  throw new Error("Not implemented") ;
+export function validateCompleteProfile(profile: Partial<UserProfile>): boolean { 
+return (
+  profile.username !== undefined &&
+  profile.email !== undefined &&
+  profile.age !== undefined &&
+  profile.bio !== undefined
+);
+
 }
 
 console.log(updateProfile(user1, { age: 26 }))
 console.log(updateProfile(user1, {username:"Eva"}))
+console.log(validateCompleteProfile(user1))
